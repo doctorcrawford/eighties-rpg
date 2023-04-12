@@ -2,7 +2,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Character from './../src/js/character.js';
-import { DanceMove } from './js/dance-moves';
+import { DanceMove } from './js/dance-move';
 
 
 const sprinkler = new DanceMove("Sprinkler",60, 8);

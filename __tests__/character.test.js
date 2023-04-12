@@ -12,25 +12,11 @@ describe('Character', () => {
     expect(meanGirl.weirdness).toEqual(3);
     expect(meanGirl.repPoints).toEqual(80);
   });
-
-  // test('should correctly determine whether three lengths are not a triangle', () => {
-  //   const notTriangle = new Triangle(3,9,22);
-  //   expect(notTriangle.checkType()).toEqual("not a triangle");
-  // });
-
-  // test('should correctly determine whether three lengths make an isosceles triangle', () => {
-  //   const isocTriangle = new Triangle(5,5,7)
-  //   expect(isocTriangle.checkType()).toEqual("isosceles triangle");
-  // });
-
-  // test('should correctly determine whether three lengths make an scalene triangle', () => {
-  //   const scalTriangle = new Triangle(2,3,4)
-  //   expect(scalTriangle.checkType()).toEqual("scalene triangle");
-  // });
-
-  // test('should correctly determine whether three lengths make an equilateral triangle', () => {
-  //   const equiTriangle = new Triangle(5,5,5)
-  //   expect(equiTriangle.checkType()).toEqual("equilateral triangle");
-  // });
+  
+  test('should adjust the moves battle effectiveness and damage', () => {
+    meanGirl.makeAMove(sprinkler);
+    expect(moonWalk.battleEffectiveness).toEqual(24.6);
+    expect(moonWalk.battleDamage).toEqual(54.5);
+  });
 
 });
