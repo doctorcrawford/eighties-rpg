@@ -56,3 +56,6 @@ displayCharacters(bender);
 displayCharacters(brian);
 displayCharacters(andrew);
 displayCharacters(ali);
+
+
+claire.makeAMove(sprinkler);

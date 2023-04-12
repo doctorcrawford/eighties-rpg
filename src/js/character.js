@@ -13,14 +13,17 @@ export default class Character {
     this.level = 1;
   }
 
-  makeAMove() {    
-    // let snarkAdjust = character.snark *.5;
-    // let intelAdjust = character.intelligence *.5;
-    // let charmAdjust = character.charm *.5;
-    // this.moves[theMove.battleEffectiveness] = this.moves[theMove.baseEffectiveness] * (1+ (.01 * (snarkAdjust + intelAdjust + charmAdjust)));
-    // let strengthAdjust = character.strength *.5;
-    // let weirdnessAdjust = character.weirdness *.5;
-    // this.moves[theMove.battleDamage] = this.moves[theMove.baseDamage] * (1 + (.01 * (strengthAdjust + intelAdjust + weirdnessAdjust)));
-    // console.log(theMove);
-  };
+  makeAMove(theMove) {    
+    let snarkAdjust = this.snark * 0.5;
+    let intelAdjust = this.intelligence *.5;
+    let charmAdjust = this.charm *.5;
+    console.log(theMove.baseEffectiveness);
+    console.log(snarkAdjust);
+    theMove.battleEffectiveness = theMove.baseEffectiveness * (1+ (.01 * (snarkAdjust + intelAdjust + charmAdjust)));
+    let strengthAdjust = this.strength *.5;
+    let weirdnessAdjust = this.weirdness *.5;
+    theMove.battleDamage = theMove.baseDamage * (1 + (.01 * (strengthAdjust + intelAdjust + weirdnessAdjust)));
+    console.log(theMove);
+    console.log(theMove.battleEffectiveness);
+  }
 }
