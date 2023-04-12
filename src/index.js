@@ -41,10 +41,23 @@ function displayCharacters(character) {
   const characterDiv = document.createElement("div")
   characterDiv.setAttribute("class", "characterdiv");
   const playersDiv = document.getElementById("characters");
+  const characterKeys = Object.keys(character);
   let characterString = "";
-  for (const key in character) {
-    characterString = characterString.concat(key + ": " + character[key] + "\n");
-  }
+  characterKeys.forEach((key) => {
+    if (key == 'moves') {
+      character.moves.forEach((move) => {
+        characterString = characterString.concat("Move: " + move.name + "\n"); 
+      });
+
+  
+      // for (const property in character.moves) {
+      //   characterString = characterString.concat("Move: " + character.moves[property].name + "\n"); 
+      // }
+
+    } else if (key !== 'moves') {
+    characterString = characterString.concat(key + ": " + character[key] + "\n"); 
+    }
+  });
   characterDiv.innerText = characterString;
   playersDiv.append(characterDiv);
 }
