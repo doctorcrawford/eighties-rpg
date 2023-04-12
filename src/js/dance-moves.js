@@ -1,5 +1,6 @@
 export class DanceMove{
-  constructor(effectiveness, damage) {
+  constructor(name, effectiveness, damage) {
+    this.name = name;
     this.effectiveness = effectiveness;
     this.damage = damage;
   }
