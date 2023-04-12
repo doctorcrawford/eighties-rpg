@@ -1,9 +1,14 @@
 import Character from './../src/js/character.js';
+import { DanceMove } from './../src/js/dance-move.js';
 
 describe('Character', () => {
+  let meanGirl;
+
+  beforeEach(() => {
+    meanGirl = new Character("Claire", 6, 9, 20, 17, 3, 80, ["sprinkler", "cabbagePatch", "runningMan"]);
+  });
 
   test('should correctly create a character object with many properties', () => {
-    const meanGirl = new Character("Claire", 6, 9, 20, 17, 3, 80, ["sprinkler", "cabbagePatch", "runningMan"]);
     expect(meanGirl.name).toEqual("Claire");
     expect(meanGirl.strength).toEqual(6);
     expect(meanGirl.intelligence).toEqual(9);
@@ -14,9 +19,10 @@ describe('Character', () => {
   });
   
   test('should adjust the moves battle effectiveness and damage', () => {
+    let sprinkler = new DanceMove("Sprinkler",60, 8);
     meanGirl.makeAMove(sprinkler);
-    expect(moonWalk.battleEffectiveness).toEqual(24.6);
-    expect(moonWalk.battleDamage).toEqual(54.5);
+    expect(sprinkler.battleEffectiveness).toEqual(24.6);
+    expect(sprinkler.battleDamage).toEqual(54.5);
   });
 
 });

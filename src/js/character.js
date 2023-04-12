@@ -17,10 +17,10 @@ export default class Character {
     // let snarkAdjust = character.snark *.5;
     // let intelAdjust = character.intelligence *.5;
     // let charmAdjust = character.charm *.5;
-    // this.moves[theMove.battleEffectiveness] = this.moves[theMove.baseEffectiveness] * (1+ (.01 * (snarkAdjust + intelAdjust + charmAdjust));
+    // this.moves[theMove.battleEffectiveness] = this.moves[theMove.baseEffectiveness] * (1+ (.01 * (snarkAdjust + intelAdjust + charmAdjust)));
     // let strengthAdjust = character.strength *.5;
     // let weirdnessAdjust = character.weirdness *.5;
-    // this.moves[theMove.battleDamage] = this.moves[theMove.baseDamage] * (1 + (.01 * (strengthAdjust + intelAdjust + weirdnessAdjust));
+    // this.moves[theMove.battleDamage] = this.moves[theMove.baseDamage] * (1 + (.01 * (strengthAdjust + intelAdjust + weirdnessAdjust)));
     // console.log(theMove);
   };
 }
