@@ -6,7 +6,7 @@ describe('Character', () => {
     const meanGirl = new Character("Claire", 6, 9, 20, 17, 3, 80, ["sprinkler", "cabbagePatch", "runningMan"]);
     expect(meanGirl.name).toEqual("Claire");
     expect(meanGirl.strength).toEqual(6);
-    expect(meanGirl.intellingence).toEqual(9);
+    expect(meanGirl.intelligence).toEqual(9);
     expect(meanGirl.snark).toEqual(20);
     expect(meanGirl.charm).toEqual(17);
     expect(meanGirl.weirdness).toEqual(3);
