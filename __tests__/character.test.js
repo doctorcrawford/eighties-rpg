@@ -26,7 +26,7 @@ describe('Character', () => {
     expect(sprinkler.battleDamage).toEqual(8.72);
   });
 
-  test('should ', () => {
+  test('should decrease receiving character repPoints by inflicting character battleDamage', () => {
     let andrew = new Character("Andrew",20,3,14,17,1,75,["sprinkler","cabbagePatch","runningMan"]);
     let battleDmg = claire.makeAMove(sprinkler);
     andrew.takeAHit(battleDmg);

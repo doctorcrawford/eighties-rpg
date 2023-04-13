@@ -34,13 +34,13 @@ export default class Character {
     return battleMap;
   }
 
-  takeAHit() {
-    // let randomNumber = 1;
-    // // let randomNumber = Math.floor(Math.random()*100);
-    // if (randomNumber <= battleMap.get("effectiveness")){
-    //   this.repPoints -= battleMap.get("damage");
-    // }else {
-    //   return "you missed, you got no rizz!";
-    // }
+  takeAHit(battleMap) {
+    let randomNumber = 1;
+    // let randomNumber = Math.floor(Math.random()*100);
+    if (randomNumber <= battleMap.get("effectiveness")){
+      this.repPoints -= battleMap.get("damage");
+    }else {
+      return "you missed, you got no rizz!";
+    }
   }
 }
