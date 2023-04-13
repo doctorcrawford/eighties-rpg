@@ -21,3 +21,15 @@ body {
   border: 1px solid black;
   width: 65%;
 }
+
+#moves-form {
+
+  position: absolute;
+  z-index: 5;
+  width: 500px;
+  height: 500px;
+  background-color: yellow;
+  top: 14%;
+  left: 10%;
+  padding: 20px;
+}

@@ -102,8 +102,35 @@ function handleFormSubmissionPlayer2(e) {
   displayCrew();
 }
 
+function showMoves(e) {
+  const movesForm = document.getElementById("moves-form");
+  movesForm.removeAttribute("class")
+  const form = document.createElement("form");
+  const submit = document.createElement("button");
+  let selected = e.target.dataset.id;
+  const characters = arrayCharacters();
+  characters.forEach((character) => {
+    if (character.name === selected) {
+      character.moves.forEach((move) => {
+        let radio = document.createElement("input");
+        let label = document.createElement("label");
+        radio.type = "radio";
+        radio.name = "moves";
+        radio.value = move.name;
+        label.innerText = move.name;
+        form.append(radio, label);
+      });
+    }
+  });
+  submit.type = "submit";
+  submit.innerText = "Use this move";
+  movesForm.append(form, submit);
+}
+
 document.querySelector("form#player1-form").addEventListener("submit", handleFormSubmissionPlayer1);
 document.querySelector("form#player2-form").addEventListener("submit", handleFormSubmissionPlayer2);
+document.getElementById("crew1").addEventListener("click", showMoves)
+document.getElementById("crew2").addEventListener("click", showMoves)
 
 displayMainCharacterContainer();
 
