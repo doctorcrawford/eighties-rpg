@@ -9,9 +9,9 @@ export default class Crew {
     this.characters.push(character);
   }
 
-  addToScore() {
-    // if(hitsTaken === Number(hitsTaken)){
-    //   this.score += hitsTaken;
-    // }        
+  addToScore(hitsTaken) {
+    if(hitsTaken === Number(hitsTaken)){
+      this.score += hitsTaken;
+    }        
   }
 }

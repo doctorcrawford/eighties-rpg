@@ -27,7 +27,7 @@ describe('Crew', () => {
     expect(crew1.characters[0].name).toEqual("Claire");
   });
 
-  test('should add character to crew', () => {
+  test('should increase crew score by amount of damage done', () => {
     crew1.addCharacter(claire);
     crew2.addCharacter(andrew);
     let battleMap = claire.makeAMove(sprinkler);
