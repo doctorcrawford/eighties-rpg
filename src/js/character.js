@@ -35,10 +35,11 @@ export default class Character {
   }
 
   takeAHit(battleMap) {
-    let randomNumber = 1;
-    // let randomNumber = Math.floor(Math.random()*100);
+    let randomNumber = Math.floor(Math.random()*100);
+    console.log(randomNumber);
     if (randomNumber <= battleMap.get("effectiveness")){
       this.repPoints -= battleMap.get("damage");
+      return battleMap.get("damage");
     }else {
       return "you missed, you got no rizz!";
     }

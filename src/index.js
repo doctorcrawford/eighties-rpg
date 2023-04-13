@@ -16,29 +16,12 @@ let kidNPlay = new DanceMove("Kid 'n Play",20, 25);
 let claire = new Character("Claire",6,9,17,20,3,70,[sprinkler,runningMan,rogerRabbit]);
 let bender = new Character("Bender",12,8,20,4,11,35,[popNLock,moonWalk,kidNPlay]);
 let brian = new Character("Brian",4,20,4,10,17,44,[runningMan,carlton,popNLock]);
-let andrew = new Character("Andrew",20,3,14,17,1,75[sprinkler,cabbagePatch,runningMan]);
+let andrew = new Character("Andrew",20,3,14,17,1,75,[sprinkler,cabbagePatch,runningMan]);
 let ali = new Character("Ali",4,11,18,2,20,41,[rogerRabbit,carlton,kidNPlay]);
-console.log(claire);
-console.log(bender);
-console.log(brian);
-console.log(andrew);
-console.log(ali);
 
-
-
-// function displayCharacters() {
-//   const characterDiv = document.getElementById("characters");
-//   let claireString = "";
-//   for (const key in claire) {
-//     claireString = claireString.concat(key + ": " + claire[key] + "\n");
-//   }
-//   let claireDiv = document.createElement("div");
-//   claireDiv.innerText = claireString;
-//   characterDiv.append(claireDiv);
-// }
 
 function displayCharacters(character) {
-  const characterDiv = document.createElement("div")
+  const characterDiv = document.createElement("div");
   characterDiv.setAttribute("class", "characterdiv");
   const playersDiv = document.getElementById("characters");
   const characterKeys = Object.keys(character);
@@ -48,19 +31,23 @@ function displayCharacters(character) {
       character.moves.forEach((move) => {
         characterString = characterString.concat("Move: " + move.name + "\n"); 
       });
-
-  
-      // for (const property in character.moves) {
-      //   characterString = characterString.concat("Move: " + character.moves[property].name + "\n"); 
-      // }
-
     } else if (key !== 'moves') {
-    characterString = characterString.concat(key + ": " + character[key] + "\n"); 
+      characterString = characterString.concat(key + ": " + character[key] + "\n"); 
     }
   });
   characterDiv.innerText = characterString;
   playersDiv.append(characterDiv);
 }
+
+// function gamePlay() {
+//   let dancerName = get dat value
+//   let dancer = crew1.characters.includes(dancerName)
+//   let battleDmg = claire.makeAMove(sprinkler);
+//   andrew.takeAHit(battleDmg);
+// }
+
+// gamePlay();
+console.log(andrew);
 
 
 
@@ -71,4 +58,3 @@ displayCharacters(andrew);
 displayCharacters(ali);
 
 
-claire.makeAMove(sprinkler);
