@@ -3,6 +3,7 @@ export default class Crew {
     this.crewName = crewName;
     this.characters = [];
     this.score = 0;
+    this.turn = false;
   }
 
   addCharacter(character) {

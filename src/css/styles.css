@@ -7,3 +7,17 @@ body {
   padding: 10px;
   margin: 10px;
 }
+
+.hidden {
+  display: none;
+}
+
+#battleground {
+  display: flex;
+  justify-content: space-between;
+}
+
+#dance-floor {
+  border: 1px solid black;
+  width: 65%;
+}
