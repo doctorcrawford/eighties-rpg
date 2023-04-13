@@ -1,7 +1,10 @@
 export default class Crew {
-  constructor() {
-    // this.crewName = crewName;
-    // this.characters = new Map();
+  constructor(crewName) {
+    this.crewName = crewName;
+    this.characters = [];
   }
 
+  // addCharacter(character) {
+  //   this.characters.push(character);
+  // }
 }
