@@ -4,7 +4,7 @@ export default class Crew {
     this.characters = [];
   }
 
-  // addCharacter(character) {
-  //   this.characters.push(character);
-  // }
+  addCharacter() {
+    // this.characters.push(character);
+  }
 }
